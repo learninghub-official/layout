@@ -216,18 +216,26 @@
               </div>
 
               <script>
+                // Ensure elements exist before adding event listeners
                 const hamburger = document.getElementById('hamburger');
                 const sidebar = document.querySelector('.sidebar');
                 const hamburgerMobile = document.getElementById('hamburger-mobile');
-            
-                hamburger.addEventListener('click', () => {
-                  sidebar.classList.toggle('open');
-                });
-            
-                hamburgerMobile.addEventListener('click', () => {
-                  sidebar.classList.toggle('open');
-                });
+              
+                // Check if hamburger and sidebar elements exist before attaching event listeners
+                if (hamburger && sidebar) {
+                  hamburger.addEventListener('click', () => {
+                    sidebar.classList.toggle('open');
+                  });
+                }
+              
+                // Check if hamburgerMobile and sidebar elements exist before attaching event listeners
+                if (hamburgerMobile && sidebar) {
+                  hamburgerMobile.addEventListener('click', () => {
+                    sidebar.classList.toggle('open');
+                  });
+                }
               </script>
+              
 
 </body>
 
